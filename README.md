@@ -1,1 +1,31 @@
-# gpu-specs
+# GPU Specifications for AI Projects
+
+Welcome to the **GPU Specifications for AI Projects** repository!  
+This project aims to centralize detailed specifications for GPUs, particularly in the context of AI workloads. 
+
+## Why This Project?
+
+Finding comprehensive and accurate GPU specifications for AI can be challenging. Many sources are either incomplete, inconsistent, or unavailable. This repository consolidates information into a single, accessible resource to assist AI researchers, developers, and enthusiasts.
+
+If you believe this project duplicates an existing effort, or if a similar database already exists, please let us know by opening an issue or contacting us directly. Collaboration or linking efforts can benefit the entire community!
+
+## What’s Included?
+
+The core of this project is a [JSON database](data/specs.json) containing detailed specifications of GPUs:
+- Precision support (e.g., FP32, FP16, INT8, etc.)
+- Compute & Memory capabilities
+- Additional details relevant to AI workloads
+
+The JSON data is rendered into:
+- [HTML](https://g.masse.me/gpu-specs) for easy browsing.
+- [Markdown](specs.md) for lightweight documentation.
+
+## Contributing
+
+If you spot errors, have missing data, or can add reliable sources, we welcome your input!
+See the [CONTRIBUTING.md](CONTRIBUTING.md) file for details.
+
+## Roadmap
+
+- Add missing specifications for GPUs.
+- Expand support to cover GPUs from various vendors (NVIDIA, AMD, etc.).

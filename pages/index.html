@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPU Data Table</title>
+    <!-- Include Handsontable CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.css">
+    <style>
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+        /* Overidding default handsonetable css */
+        .handsontable td {
+            font-family: 'Source Sans Pro', sans-serif !important;
+        }
+        .colHeader {
+            font-weight: bold;
+        }
+        /* Custom cell style */
+        .attribute-column {
+            font-weight: bold;
+            text-align: left;
+        }
+        .architecture-details {
+            background-color: #f8f8f8 !important; /* Light grey background */
+        }
+        .data-cell {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>GPU Specs</h1>
+    <div id="specs"></div>
+    <!-- Include Handsontable JS -->
+    <script src="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.js"></script>
+    <script src="table.js"></script>
+</body>
+</html>
