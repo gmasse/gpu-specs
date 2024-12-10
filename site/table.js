@@ -99,8 +99,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 contextMenu: ['undo','redo','---------','hidden_columns_hide','hidden_columns_show'],
                 cells: (row, col) => {
                     const classes = [];
-                    // class for the Architecture Details section
-                    if (row >= architectureRowIndex) {
+                    // class depending on the precision
+                    if (row < architectureRowIndex) {
+                        // get the precision from attributeName (before _)
+                        const precision = combinedData[row].Attribute.split(" ")[0] || combinedData[row].Attribute
+                        classes.push(`precision-${precision}`);
+                    } else {
+                        // class for the Architecture Details section
                         classes.push("architecture-details");
                     }
                     // class for the first column
