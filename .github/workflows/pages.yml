@@ -31,13 +31,19 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      # Create a directory for aggregated content
+      - name: Aggregate content
+        run: |
+          mkdir -p web_content
+          cp -r site/* web_content/
+          cp -r data/* web_content/
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
-          path: 'site'
+          # Upload content
+          path: 'web_content'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
