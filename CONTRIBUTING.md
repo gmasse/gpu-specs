@@ -55,7 +55,7 @@ git checkout -b feature/your-feature-name
 ### 4. Make Your Changes
 
 Edit the JSON file in the `data/` directory.
-Run the scripts in `scripts/` to regenerate the HTML or Markdown (if applicable).
+Run the scripts in `scripts/` to serve HTML or generate Markdown (if applicable).
 
 ### 5. Submit a Pull Request
 
