@@ -58,16 +58,19 @@
       "int4_tensor_core_sparsity": 0,
       "manufacturer": "NVIDIA",
       "architecture": "Volta",
+      "nvidia_rt_cores": 0,
       "nvidia_tensor_cores": 640,
       "nvidia_tensor_cores_generation": 1,
       "nvidia_cuda_cores": 5120,
       "gpu_memory": 16,
       "memory_bandwidth": 900,
       "interconnect": "PCIe Gen3",
+      "encoders_decoders": "3, 1",
       "cuda_compute_capability": "7",
       "sources": [
          "https://images.nvidia.com/content/technologies/volta/pdf/volta-v100-datasheet-update-us-1165301-r5.pdf",
-         "https://www.techpowerup.com/gpu-specs/tesla-v100-pcie-16-gb.c2957"
+         "https://www.techpowerup.com/gpu-specs/tesla-v100-pcie-16-gb.c2957",
+         "https://developer.nvidia.com/video-encode-and-decode-gpu-support-matrix-new"
       ]
    },
    "v100s": {
@@ -94,16 +97,19 @@
       "int4_tensor_core_sparsity": 0,
       "manufacturer": "NVIDIA",
       "architecture": "Volta",
+      "nvidia_rt_cores": 0,
       "nvidia_tensor_cores": 640,
       "nvidia_tensor_cores_generation": 1,
       "nvidia_cuda_cores": 5120,
       "gpu_memory": 32,
       "memory_bandwidth": 1134,
       "interconnect": "PCIe Gen3",
+      "encoders_decoders": "3, 1",
       "cuda_compute_capability": "7",
       "sources": [
          "https://images.nvidia.com/content/technologies/volta/pdf/volta-v100-datasheet-update-us-1165301-r5.pdf",
-         "https://www.techpowerup.com/gpu-specs/tesla-v100-pcie-32-gb.c3184"
+         "https://www.techpowerup.com/gpu-specs/tesla-v100-pcie-32-gb.c3184",
+         "https://developer.nvidia.com/video-encode-and-decode-gpu-support-matrix-new"
       ]
    },
    "quadro_rtx_5000": {
@@ -131,6 +137,7 @@
       "manufacturer": "NVIDIA",
       "architecture": "Turing",
       "nvidia_rt_cores": 48,
+      "nvidia_rt_cores_generation": null,
       "nvidia_tensor_cores": 384,
       "nvidia_tensor_cores_generation": 2,
       "nvidia_cuda_cores": 3072,
@@ -168,15 +175,19 @@
       "int4_tensor_core_sparsity": null,
       "manufacturer": "NVIDIA",
       "architecture": "Turing",
+      "nvidia_rt_cores": null,
+      "nvidia_rt_cores_generation": null,
       "nvidia_tensor_cores": 320,
       "nvidia_tensor_cores_generation": 2,
       "nvidia_cuda_cores": 2560,
       "gpu_memory": 16,
       "memory_bandwidth": 300,
       "interconnect": "PCIe Gen3",
+      "encoders_decoders": "1, 2",
       "cuda_compute_capability": "7.5",
       "sources": [
-         "https://getdeploying.com/reference/cloud-gpu/nvidia-t4"
+         "https://getdeploying.com/reference/cloud-gpu/nvidia-t4",
+         "https://developer.nvidia.com/video-encode-and-decode-gpu-support-matrix-new"
       ]
    },
    "l4": {
@@ -211,7 +222,7 @@
       "gpu_memory": 24,
       "memory_bandwidth": 300,
       "interconnect": "PCIe Gen4",
-      "encoders_decoders": "2, 4, 4",
+      "encoders_decoders": "2, 4",
       "cuda_compute_capability": "8.9",
       "sources": [
          "https://resources.nvidia.com/en-us-data-center-overview/l4-gpu-datasheet",
@@ -250,11 +261,12 @@
       "gpu_memory": 24,
       "memory_bandwidth": 600,
       "interconnect": "PCIe Gen4",
-      "encoders_decoders": "1, 1",
+      "encoders_decoders": "1, 2",
       "cuda_compute_capability": "8.6",
       "sources": [
          "https://resources.nvidia.com/en-us-gpu/a10-datasheet-nvidia",
-         "https://www.techpowerup.com/gpu-specs/a10-pcie.c3793"
+         "https://www.techpowerup.com/gpu-specs/a10-pcie.c3793",
+         "https://developer.nvidia.com/video-encode-and-decode-gpu-support-matrix-new"
       ]
    },
    "l40s": {
@@ -320,16 +332,20 @@
       "int4_tensor_core_sparsity": null,
       "manufacturer": "NVIDIA",
       "architecture": "Ampere",
+      "nvidia_rt_cores": null,
+      "nvidia_rt_cores_generation": null,
       "nvidia_tensor_cores": 432,
       "nvidia_tensor_cores_generation": 3,
       "nvidia_cuda_cores": 6912,
       "gpu_memory": 80,
       "memory_bandwidth": 1935,
       "interconnect": "PCIe Gen4",
+      "encoders_decoders": "0, 5",
       "cuda_compute_capability": "8",
       "sources": [
          "https://www.nvidia.com/content/dam/en-zz/Solutions/Data-Center/a100/pdf/nvidia-a100-datasheet-us-nvidia-1758950-r4-web.pdf",
-         "https://www.techpowerup.com/gpu-specs/a100-pcie-80-gb.c3821"
+         "https://www.techpowerup.com/gpu-specs/a100-pcie-80-gb.c3821",
+         "https://developer.nvidia.com/video-encode-and-decode-gpu-support-matrix-new"
       ]
    },
    "h100": {
@@ -356,17 +372,20 @@
       "int4_tensor_core_sparsity": null,
       "manufacturer": "NVIDIA",
       "architecture": "Hopper",
+      "nvidia_rt_cores": null,
+      "nvidia_rt_cores_generation": null,
       "nvidia_tensor_cores": 456,
       "nvidia_tensor_cores_generation": 4,
       "nvidia_cuda_cores": 14592,
       "gpu_memory": 80,
       "memory_bandwidth": 2048,
       "interconnect": "PCIe Gen5",
-      "encoders_decoders": "?, 7, 7",
+      "encoders_decoders": "0, 7",
       "cuda_compute_capability": "9",
       "sources": [
          "https://getdeploying.com/reference/cloud-gpu/nvidia-h100",
-         "https://www.techpowerup.com/gpu-specs/h100-pcie-80-gb.c3899"
+         "https://www.techpowerup.com/gpu-specs/h100-pcie-80-gb.c3899",
+         "https://developer.nvidia.com/video-encode-and-decode-gpu-support-matrix-new"
       ]
    }
 }
