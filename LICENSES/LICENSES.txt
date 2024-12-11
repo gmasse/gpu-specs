@@ -1,0 +1,6 @@
+Licences:
+Apache-2.0
+Unknown
+
+Packages:
+https://github.com/handsontable/handsontable; Unknown. See https://github.com/handsontable/handsontable/blob/develop/LICENSE.txt file
