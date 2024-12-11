@@ -99,34 +99,20 @@ document.addEventListener("DOMContentLoaded", () => {
                 contextMenu: ['undo','redo','---------','hidden_columns_hide','hidden_columns_show'],
                 cells: (row, col) => {
                     const classes = [];
-                    // class depending on the precision
                     if (row < architectureRowIndex) {
-                        // get the precision from attributeName (before _)
+                        // class depending on the precision
                         const precision = combinedData[row].Attribute.split(" ")[0] || combinedData[row].Attribute
                         classes.push(`precision-${precision}`);
                     } else {
+                        if (row === architectureRowIndex) {
+                            // class for the first row of Architecture Details section
+                            classes.push("architecture-details-border");
+                        }
                         // class for the Architecture Details section
                         classes.push("architecture-details");
                     }
-                    // class for the first column
-                    if (col === 0) {
-                        classes.push("attribute-column");
-                    }
-                    else // class for the data cells
-                    {
-                        classes.push("data-cell");
-                    }
                     return { className: classes.join(" ") };
                 },
-                customBorders: [
-                    {
-                        range: {
-                            from: { row: architectureRowIndex, col: 0 },
-                            to: { row: architectureRowIndex, col: Object.keys(rows).length },
-                        },
-                        top: { width: 1, color: "black" }, // Bold top border
-                    },
-                ],
             });
         })
         .catch(error => console.error("Error loading JSON data:", error));
