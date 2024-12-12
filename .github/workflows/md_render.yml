@@ -1,0 +1,37 @@
+# Render project markdown files with data and commit to current PR
+name: Render markdown files and commit to PR
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout PR branch
+      uses: actions/checkout@v4
+      with:
+        ref: ${{ github.head_ref }}
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+
+    - name: Render files
+      run: |-
+        python scripts/json2md.py data/specs.json --filter h100 l40s a100 | python scripts/md_template.py README.md.template sample_table > README.md
+        python scripts/json2md.py data/specs.json | python scripts/md_template.py specs.md.template full_table > specs.md
+
+    - name: Commit and push changes
+      run: |
+        git config user.name "GitHub Actions Bot"
+        git config user.email "actions@users.noreply.github.com"
+        git add .
+        git commit -m "Add markdown rendered files" || echo "No changes to commit"
+        git push origin HEAD
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

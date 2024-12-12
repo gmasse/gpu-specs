@@ -1,0 +1,15 @@
+# GPU Specs
+
+{full_table}
+
+## Data Conventions
+
+This page presents GPU specifications, following a standardized data structure to ensure clarity and consistency:
+
+- **Unsupported Precision:**
+  The value `N/A` indicates that a specific precision (e.g., FP8) is **not natively supported** by the GPU.
+
+- **Missing Data:**
+  The value `?` means that the information is currently unavailable or not confirmed.
+
+If you have questions or feedback, feel free to [open an issue](https://github.com/gmasse/gpu-specs/issues) on the project repository.
