@@ -1,6 +1,11 @@
 import argparse
 import json
 import sys
+import logging
+
+# Configure logging
+logging.basicConfig(level=logging.ERROR, format='%(asctime)s - %(levelname)s - %(message)s')
+logger = logging.getLogger(__name__)
 
 # Helper function to convert a number to its ordinal representation
 def ordinal(n):
@@ -15,9 +20,15 @@ def ordinal(n):
     else:
         return f"{n}th"
 
-def json_to_markdown(json_data):
+def json_to_markdown(json_data, filter):
+    logger.info("Starting JSON to Markdown conversion.")
     header = json_data["_header"]
     gpus = {k: v for k, v in json_data.items() if k != "_header"}
+
+    # Apply filter if provided
+    if filter:
+        logger.debug("Applying GPU filter: %s", filter)
+        gpus = {k: v for k, v in gpus.items() if k in filter}
 
     # Define categories for separation
     specs_attributes = [attr for attr, details in header.items() if "unit" in details and details["unit"] in ("TFLOPS", "TOPS")]
@@ -35,9 +46,9 @@ def json_to_markdown(json_data):
         if generation_attr in gpu:
             generation_value = gpu.get(generation_attr)
             # if value is a number
-            if isinstance(value, (int, float)):
+            if isinstance(generation_value, (int, float)):
                 value = f"{value} ({ordinal(generation_value)} gen)"
-            else:
+            elif generation_value is not None:
                 value = f"{value} (gen {generation_value})"
         return value
 
@@ -77,23 +88,26 @@ def main():
     parser = argparse.ArgumentParser(description="Convert JSON GPU Specs to Markdown")
     group = parser.add_mutually_exclusive_group()
     group.add_argument("file", type=str, nargs="?", help="Input JSON file (default: read from stdin)")
+    parser.add_argument("--filter", nargs="+", help="Optional list of GPUs to include in the output.")
     args = parser.parse_args()
+
+    logger.debug(f"Arguments received: {args}")
 
     if args.file is not None:
         try:
             with open(args.file, "r") as f:
                 data = json.load(f)
         except FileNotFoundError:
-            print(f"Error: File '{args.file}' not found.")
+            logger.critical("Error: File '%s' not found.", args.file)
             sys.exit(1)
     else:
         try:
             data = json.load(sys.stdin)
         except json.JSONDecodeError:
-            print("Error: Invalid JSON input.")
+            logger.critical("Error: Invalid JSON input.")
             sys.exit(1)
 
-    markdown = json_to_markdown(data)
+    markdown = json_to_markdown(data, filter=args.filter)
     print(markdown)
 
 if __name__ == "__main__":
