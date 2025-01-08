@@ -23,7 +23,7 @@ jobs:
 
     - name: Render files
       run: |-
-        python scripts/json2md.py data/specs.json --filter h100 l40s a100 | python scripts/md_template.py README.md.template sample_table > README.md
+        python scripts/json2md.py data/specs.json --filter h100 l40s a100_pcie_80gb | python scripts/md_template.py README.md.template sample_table > README.md
         python scripts/json2md.py data/specs.json | python scripts/md_template.py specs.md.template full_table > specs.md
 
     - name: Commit and push changes
