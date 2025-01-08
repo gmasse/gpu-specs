@@ -469,7 +469,7 @@
       "gpu_memory": "16/32",
       "memory_bandwidth": 900,
       "interconnect": "PCIe Gen3",
-      "encoders_decoders": null,
+      "encoders_decoders": "3, 1",
       "cuda_compute_capability": "7",
       "power_consumption": 250,
       "sources": [
@@ -508,12 +508,13 @@
       "gpu_memory": "16/32",
       "memory_bandwidth": 900,
       "interconnect": "NVLink",
-      "encoders_decoders": null,
+      "encoders_decoders": "3, 1",
       "cuda_compute_capability": "7",
       "power_consumption": 300,
       "sources": [
          "https://images.nvidia.com/content/technologies/volta/pdf/volta-v100-datasheet-update-us-1165301-r5.pdf",
-         "https://www.techpowerup.com/gpu-specs/tesla-v100-sxm2-32-gb.c3183"
+         "https://www.techpowerup.com/gpu-specs/tesla-v100-sxm2-32-gb.c3183",
+         "https://developer.nvidia.com/video-encode-and-decode-gpu-support-matrix-new"
       ]
    },
    "v100s_pcie": {
@@ -547,12 +548,13 @@
       "gpu_memory": 32,
       "memory_bandwidth": 1134,
       "interconnect": "PCIe Gen3",
-      "encoders_decoders": null,
+      "encoders_decoders": "3, 1",
       "cuda_compute_capability": "7",
       "power_consumption": 250,
       "sources": [
          "https://images.nvidia.com/content/technologies/volta/pdf/volta-v100-datasheet-update-us-1165301-r5.pdf",
-         "https://www.techpowerup.com/gpu-specs/tesla-v100s-pcie-32-gb.c3584"
+         "https://www.techpowerup.com/gpu-specs/tesla-v100s-pcie-32-gb.c3584",
+         "https://developer.nvidia.com/video-encode-and-decode-gpu-support-matrix-new"
       ]
    }
 }
