@@ -440,13 +440,13 @@
    },
    "v100_pcie": {
       "name": "V100 PCIe",
-      "fp64": 7,
+      "fp64": 7.1,
       "fp64_tensor_core": 0,
-      "fp32": 14,
+      "fp32": 14.1,
       "tf32_tensor_core": 112,
       "tf32_tensor_core_sparsity": 0,
-      "fp16": 0,
-      "fp16_tensor_core": 0,
+      "fp16": 28.3,
+      "fp16_tensor_core": 112,
       "fp16_tensor_core_sparsity": null,
       "bf16": 0,
       "bf16_tensor_core": 0,
@@ -474,7 +474,8 @@
       "power_consumption": 250,
       "sources": [
          "https://images.nvidia.com/content/technologies/volta/pdf/volta-v100-datasheet-update-us-1165301-r5.pdf",
-         "https://www.techpowerup.com/gpu-specs/tesla-v100-pcie-32-gb.c3184"
+         "https://www.techpowerup.com/gpu-specs/tesla-v100-pcie-32-gb.c3184",
+         "https://developer.nvidia.com/video-encode-and-decode-gpu-support-matrix-new"
       ]
    },
    "v100_sxm2": {
@@ -484,8 +485,8 @@
       "fp32": 15.7,
       "tf32_tensor_core": 125,
       "tf32_tensor_core_sparsity": 0,
-      "fp16": 0,
-      "fp16_tensor_core": 0,
+      "fp16": 31.3,
+      "fp16_tensor_core": 125,
       "fp16_tensor_core_sparsity": null,
       "bf16": 0,
       "bf16_tensor_core": 0,
@@ -513,6 +514,7 @@
       "power_consumption": 300,
       "sources": [
          "https://images.nvidia.com/content/technologies/volta/pdf/volta-v100-datasheet-update-us-1165301-r5.pdf",
+         "https://www.techpowerup.com/gpu-specs/tesla-v100-sxm2-16-gb.c3018",
          "https://www.techpowerup.com/gpu-specs/tesla-v100-sxm2-32-gb.c3183",
          "https://developer.nvidia.com/video-encode-and-decode-gpu-support-matrix-new"
       ]
