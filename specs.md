@@ -16,6 +16,8 @@ BF16 Tensor Core with Sparsity (TFLOPS) | 1513 | 733 | 242 | 624 | 624 | 624 | 6
 FP8 (TFLOPS) | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A
 FP8 Tensor Core (TFLOPS) | ? | 733 | 242 | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A
 FP8 Tensor Core with Sparsity (TFLOPS) | 3026 | 1466 | 485 | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A
+FP4 (TFLOPS) | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A
+FP4 Tensor Core (TFLOPS) | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A
 INT8 (TOPS) | ? | ? | ? | ? | ? | ? | ? | ? | 130 | ? | ? | ? | ?
 INT8 Tensor Core (TOPS) | ? | 733 | 242 | 624 | 624 | 624 | 624 | 250 | ? | ? | N/A | N/A | N/A
 INT8 Tensor Core with Sparsity (TOPS) | 3026 | 1466 | 485 | 1248 | 1248 | 1248 | 1248 | 500 | ? | ? | N/A | N/A | N/A
@@ -26,6 +28,7 @@ INT4 Tensor Core with Sparsity (TOPS) | ? | 1466 | ? | ? | ? | ? | ? | 1000 | ? 
 GPU Name | H100 | L40S | L4 | A100 PCIe 40GB | A100 PCIe 80GB | A100 SXM4 40GB | A100 SXM4 80GB | A10 | T4 | Quadro RTX 5000 | V100 PCIe | V100 SXM2 | V100S PCIe
 Manufacturer | NVIDIA | NVIDIA | NVIDIA | NVIDIA | NVIDIA | NVIDIA | NVIDIA | NVIDIA | NVIDIA | NVIDIA | NVIDIA | NVIDIA | NVIDIA
 Architecture | Hopper | Ada Lovelace | Ada Lovelace | Ampere | Ampere | Ampere | Ampere | Ampere | Turing | Turing | Volta | Volta | Volta
+Technology | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? | ?
 NVIDIA RT Cores | ? | 142 (3rd gen) | 60 (3rd gen) | ? | ? | ? | ? | 72 (2nd gen) | ? | 48 | N/A | N/A | N/A
 NVIDIA Tensor Cores | 456 (4th gen) | 568 (4th gen) | 240 (4th gen) | 432 (3rd gen) | 432 (3rd gen) | 432 (3rd gen) | 432 (3rd gen) | 288 (3rd gen) | 320 (2nd gen) | 384 (2nd gen) | 640 (1st gen) | 640 (1st gen) | 640 (1st gen)
 NVIDIA CUDA Cores | 14592 | 18176 | 7424 | 6912 | 6912 | 6912 | 6912 | 9216 | 2560 | 3072 | 5120 | 5120 | 5120
@@ -35,6 +38,7 @@ Interconnect Type | PCIe Gen5 | PCIe Gen4 | PCIe Gen4 | PCIe Gen4 | PCIe Gen4 | 
 Encoders and Decoders | 0, 7 | 3, 3 | 2, 4 | 0, 5 | 0, 5 | 0, 5 | 0, 5 | 1, 2 | 1, 2 | 1, 2 | 3, 1 | 3, 1 | 3, 1
 CUDA Compute Capability | 9 | 8.9 | 8.9 | 8.0 | 8 | 8.0 | 8 | 8.6 | 7.5 | 7.5 | 7 | 7 | 7
 Power Consumption (W) | 350 | 300 | 72 | 250 | 300 | 400 | 400 | 150 | 70 | 230 | 250 | 300 | 250
+Area (mm2) | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? | ?
 
 ## Data Conventions
 
