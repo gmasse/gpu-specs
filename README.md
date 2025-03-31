@@ -50,6 +50,9 @@ BF16 Tensor Core with Sparsity (TFLOPS) | 1513 | 733 | 624
 FP8 (TFLOPS) | N/A | N/A | N/A
 FP8 Tensor Core (TFLOPS) | ? | 733 | N/A
 FP8 Tensor Core with Sparsity (TFLOPS) | 3026 | 1466 | N/A
+FP4 (TFLOPS) | N/A | N/A | N/A
+FP4 Tensor Core (TFLOPS) | N/A | N/A | N/A
+FP4 Tensor Core with Sparsity (TFLOPS) | N/A | N/A | N/A
 INT8 (TOPS) | ? | ? | ?
 INT8 Tensor Core (TOPS) | ? | 733 | 624
 INT8 Tensor Core with Sparsity (TOPS) | 3026 | 1466 | 1248
@@ -60,6 +63,7 @@ INT4 Tensor Core with Sparsity (TOPS) | ? | 1466 | ?
 GPU Name | H100 | L40S | A100 PCIe 80GB
 Manufacturer | NVIDIA | NVIDIA | NVIDIA
 Architecture | Hopper | Ada Lovelace | Ampere
+Manufacturing Process | ? | ? | ?
 NVIDIA RT Cores | ? | 142 (3rd gen) | ?
 NVIDIA Tensor Cores | 456 (4th gen) | 568 (4th gen) | 432 (3rd gen)
 NVIDIA CUDA Cores | 14592 | 18176 | 6912
@@ -69,4 +73,5 @@ Interconnect Type | PCIe Gen5 | PCIe Gen4 | PCIe Gen4
 Encoders and Decoders | 0, 7 | 3, 3 | 0, 5
 CUDA Compute Capability | 9 | 8.9 | 8
 Power Consumption (W) | 350 | 300 | 300
+Die Size (mm2) | ? | ? | ?
 
