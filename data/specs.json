@@ -81,7 +81,7 @@
     "l40s": {
         "name": "L40S",
         "fp64": 1.4,
-        "fp64_tensor_core": null,
+        "fp64_tensor_core": 1.4,
         "fp32": 91.6,
         "tf32_tensor_core": 183,
         "tf32_tensor_core_sparsity": 366,
@@ -116,13 +116,13 @@
         "die_size": null,
         "sources": [
             "https://resources.nvidia.com/en-us-l40s/l40s-datasheet-28413",
-            "https://www.techpowerup.com/gpu-specs/l40s.c4173"
+            "https://images.nvidia.com/aem-dam/Solutions/geforce/ada/nvidia-ada-gpu-architecture.pdf"
         ]
     },
     "l4": {
         "name": "L4",
         "fp64": 0.5,
-        "fp64_tensor_core": null,
+        "fp64_tensor_core": 0.5,
         "fp32": 30.3,
         "tf32_tensor_core": 60,
         "tf32_tensor_core_sparsity": 120,
@@ -157,13 +157,13 @@
         "die_size": null,
         "sources": [
             "https://resources.nvidia.com/en-us-data-center-overview/l4-gpu-datasheet",
-            "https://www.techpowerup.com/gpu-specs/l4.c4091"
+            "https://images.nvidia.com/aem-dam/Solutions/geforce/ada/nvidia-ada-gpu-architecture.pdf"
         ]
     },
     "rtx4090": {
         "name": "GeForce RTX 4090",
         "fp64": 1.3,
-        "fp64_tensor_core": null,
+        "fp64_tensor_core": 1.3,
         "fp32": 82.6,
         "tf32_tensor_core": 82.6,
         "tf32_tensor_core_sparsity": 165.2,
@@ -280,7 +280,6 @@
         "die_size": null,
         "sources": [
             "https://www.nvidia.com/content/dam/en-zz/Solutions/Data-Center/a100/pdf/nvidia-a100-datasheet-us-nvidia-1758950-r4-web.pdf",
-            "https://www.techpowerup.com/gpu-specs/a100-pcie-80-gb.c3821",
             "https://developer.nvidia.com/video-encode-and-decode-gpu-support-matrix-new"
         ]
     },
@@ -362,14 +361,13 @@
         "die_size": null,
         "sources": [
             "https://www.nvidia.com/content/dam/en-zz/Solutions/Data-Center/a100/pdf/nvidia-a100-datasheet-us-nvidia-1758950-r4-web.pdf",
-            "https://www.techpowerup.com/gpu-specs/a100-pcie-80-gb.c3821",
             "https://developer.nvidia.com/video-encode-and-decode-gpu-support-matrix-new"
         ]
     },
     "a10": {
         "name": "A10",
-        "fp64": 1,
-        "fp64_tensor_core": null,
+        "fp64": 0.5,
+        "fp64_tensor_core": 0.5,
         "fp32": 31.2,
         "tf32_tensor_core": 62.5,
         "tf32_tensor_core_sparsity": 125,
@@ -404,13 +402,13 @@
         "die_size": null,
         "sources": [
             "https://resources.nvidia.com/en-us-gpu/a10-datasheet-nvidia",
-            "https://www.techpowerup.com/gpu-specs/a10-pcie.c3793",
+            "https://www.nvidia.com/content/PDF/nvidia-ampere-ga-102-gpu-architecture-whitepaper-v2.1.pdf",
             "https://developer.nvidia.com/video-encode-and-decode-gpu-support-matrix-new"
         ]
     },
     "t4": {
         "name": "T4",
-        "fp64": null,
+        "fp64": 0.2,
         "fp64_tensor_core": 0,
         "fp32": 8.1,
         "tf32_tensor_core": 0,
@@ -446,6 +444,7 @@
         "die_size": null,
         "sources": [
             "https://getdeploying.com/reference/cloud-gpu/nvidia-t4",
+            "https://images.nvidia.com/aem-dam/en-zz/Solutions/design-visualization/technologies/turing-architecture/NVIDIA-Turing-Architecture-Whitepaper.pdf",
             "https://developer.nvidia.com/video-encode-and-decode-gpu-support-matrix-new",
             "https://www.nvidia.com/content/dam/en-zz/Solutions/design-visualization/solutions/resources/documents1/Datasheet_NVIDIA_T4_Virtualization.pdf"
         ]
@@ -488,7 +487,8 @@
         "die_size": null,
         "sources": [
             "https://www.nvidia.com/content/dam/en-zz/Solutions/design-visualization/quadro-product-literature/quadro-rtx-5000-data-sheet-us-nvidia-704120-r4-web.pdf",
-            "https://www.techpowerup.com/gpu-specs/quadro-rtx-5000.c3308"
+            "https://images.nvidia.com/aem-dam/en-zz/Solutions/design-visualization/technologies/turing-architecture/NVIDIA-Turing-Architecture-Whitepaper.pdf"
+
         ]
     },
     "v100_pcie": {
